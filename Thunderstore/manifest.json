@@ -1,0 +1,9 @@
+{
+  "name": "BetterCarts",
+  "description": "Quick attach and detach even when not in place.  Configure weight and have up to four buddies push.  Configure damage too.",
+  "version_number": "1.0.1",
+  "website_url": "https://github.com/tastychickenlegs",
+  "dependencies": [
+    "denikson-BepInExPack_Valheim-5.4.1900"
+  ]
+}
