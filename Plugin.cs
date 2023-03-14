@@ -15,7 +15,7 @@ namespace BetterCarts
     public class BetterCartsMain : BaseUnityPlugin
     {
         internal const string ModName = "BetterCarts";
-        internal const string ModVersion = "1.0.1";
+        internal const string ModVersion = "1.0.2";
         internal const string Author = "TastyChickenLegs";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";

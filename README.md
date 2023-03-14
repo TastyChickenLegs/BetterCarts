@@ -44,6 +44,9 @@ Start the game.
 
 ### Version Information
 
+1.0.1
+
+- fixed bug with hardcoded "V" in player GUI
 
 1.0.0
 

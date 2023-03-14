@@ -44,6 +44,10 @@ Start the game.
 
 ### Version Information
 
+1.0.2
+
+- update to newest Valheim patch .214.2 no other changes.
+
 1.0.1
 
 - fixed bug with hardcoded "V" in player GUI
