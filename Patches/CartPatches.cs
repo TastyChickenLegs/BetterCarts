@@ -18,7 +18,7 @@ namespace BetterCarts.Patches;
             private static void Postfix(Vagon __instance, ref string __result, ref ZNetView ___m_nview, ref string ___m_name)
 
             {
-                __result = Localization.instance.Localize(___m_name + "\n[<color=yellow>"+ CartConfigsMain.cartHotKey.Value.MainKey +"</color>] Quick Attach/Detach" + "\n <color=yellow>Better Carts Mod</color>");
+                __result = Localization.instance.Localize(___m_name + "\n[<color=yellow>"+ CartConfigsMain.cartHotKey.Value +"</color>] Quick Attach/Detach" + "\n <color=yellow>Better Carts Mod</color>");
                 //"\n[<color=yellow><b>E</b></color>] Use" +
             }
         }

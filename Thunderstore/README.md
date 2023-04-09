@@ -44,6 +44,17 @@ Start the game.
 
 ### Version Information
 
+1.0.4
+
+- Fixed server error when synchronizing initial configuration
+
+
+
+1.0.3
+
+- Update to newest Valheim Patch .214.300
+
+
 1.0.2
 
 - update to newest Valheim patch .214.2 no other changes.

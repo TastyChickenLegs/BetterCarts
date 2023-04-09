@@ -13,7 +13,7 @@ namespace BetterCarts.Patches
     internal class CartConfigsMain
     {
 
-        public static ConfigEntry<KeyboardShortcut> cartHotKey;
+        public static ConfigEntry<KeyCode> cartHotKey;
         public static ConfigEntry<int> attachDistance;
         public static ConfigEntry<bool> allowOutOfPlaceAttach;
         public static ConfigEntry<bool> cartNoDamage;
@@ -40,7 +40,7 @@ namespace BetterCarts.Patches
                 new ConfigurationManagerAttributes { DispName = "Allow Out of Place Attach"}));
 
             cartHotKey = BetterCartsMain.context.config("Cart", "HotKey", 
-                new KeyboardShortcut(KeyCode.V), 
+                KeyCode.V, 
                 new ConfigDescription("The hotkey to attach/detach a nearby cart", null,
                 new ConfigurationManagerAttributes { DispName = "Attach Detach HotKey"}));
 

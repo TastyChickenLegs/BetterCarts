@@ -15,7 +15,7 @@ namespace BetterCarts
     public class BetterCartsMain : BaseUnityPlugin
     {
         internal const string ModName = "BetterCarts";
-        internal const string ModVersion = "1.0.2";
+        internal const string ModVersion = "1.0.4";
         internal const string Author = "TastyChickenLegs";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
@@ -24,7 +24,7 @@ namespace BetterCarts
         internal static string ConnectionError = "";
         public static BetterCartsMain context;
 
-        private readonly Harmony _harmony = new(ModGUID);
+        private readonly Harmony harmony = new(ModGUID);
 
         public static readonly ManualLogSource BetterCartsLogger =
             BepInEx.Logging.Logger.CreateLogSource(ModName);
@@ -50,7 +50,7 @@ namespace BetterCarts
             CartConfigsMain.Generate();
 
             Assembly assembly = Assembly.GetExecutingAssembly();
-            _harmony.PatchAll(assembly);
+            harmony.PatchAll(assembly);
             SetupWatcher();
         }
 
@@ -138,7 +138,7 @@ namespace BetterCarts
             if (!modEnabled.Value || TastyUtils.IgnoreKeyPresses(true))
                 return;
 
-            if (Input.GetKeyDown(CartConfigsMain.cartHotKey.Value.MainKey))
+            if (Input.GetKeyDown(CartConfigsMain.cartHotKey.Value))
             {
 
                 float attachDistanceFloat = Convert.ToSingle(CartConfigsMain.attachDistance.Value);
