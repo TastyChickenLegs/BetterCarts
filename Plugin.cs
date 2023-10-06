@@ -15,7 +15,7 @@ namespace BetterCarts
     public class BetterCartsMain : BaseUnityPlugin
     {
         internal const string ModName = "BetterCarts";
-        internal const string ModVersion = "1.0.4";
+        internal const string ModVersion = "1.0.6";
         internal const string Author = "TastyChickenLegs";
         private const string ModGUID = Author + "." + ModName;
         private static string ConfigFileName = ModGUID + ".cfg";
@@ -165,26 +165,26 @@ namespace BetterCarts
         }
 
 
-        [HarmonyPatch(typeof(Terminal), "InputText")]
-        private static class InputText_Patch
-        {
-            private static bool Prefix(Terminal __instance)
-            {
-                if (!BetterCartsMain.modEnabled.Value)
-                    return true;
-                string text = __instance.m_input.text;
-                if (text.ToLower().Equals($"{typeof(BepInPlugin).Namespace.ToLower()} reset"))
-                {
-                    BetterCartsMain.context.Config.Reload();
-                    BetterCartsMain.context.Config.Save();
+        //[HarmonyPatch(typeof(Terminal), "InputText")]
+        //private static class InputText_Patch
+        //{
+        //    private static bool Prefix(Terminal __instance)
+        //    {
+        //        if (!BetterCartsMain.modEnabled.Value)
+        //            return true;
+        //        string text = __instance.m_input.text;
+        //        if (text.ToLower().Equals($"{typeof(BepInPlugin).Namespace.ToLower()} reset"))
+        //        {
+        //            BetterCartsMain.context.Config.Reload();
+        //            BetterCartsMain.context.Config.Save();
 
-                    __instance.AddString(text);
-                    __instance.AddString($"{BetterCartsMain.context.Info.Metadata.Name} config reloaded");
-                    return false;
-                }
-                return true;
-            }
-        }
+        //            __instance.AddString(text);
+        //            __instance.AddString($"{BetterCartsMain.context.Info.Metadata.Name} config reloaded");
+        //            return false;
+        //        }
+        //        return true;
+        //    }
+        //}
     }
     
 }
